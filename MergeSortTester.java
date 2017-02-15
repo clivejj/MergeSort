@@ -7,19 +7,26 @@
 /*======================================
   class MergeSortTester
   ALGORITHM:
-  <INSERT YOUR DISTILLATION OF ALGO HERE>
+  MergeSortTester creates 2D arrays with a constant 1000 rows and varying column length (1, 10, 100, 1000, 10000, 100000) to test the 
+  speed (in milliseconds) of an array of size 1, 10, 100, 1000, 10000, and 100000 a total of 1000 times. It proceeds to divide the time 
+  result by 1000 in order to arrive at the average time per size of the array (column length) that MergeSort sorts.
+  
   BIG-OH CLASSIFICATION OF ALGORITHM:
-  <INSERT YOUR EXECUTION TIME CATEGORIZATION OF MERGESORT HERE>
+  O(nlogn)
   Mean execution times for dataset of size n:
-  Batch size: <# of times each dataset size was run>
-  n=1       time: 0.001
-  n=10      time: 0.003
-  n=100     time: 0.03
-  n=1000    time: 0.208
-  n=10000   time: 2.05
-  n=100000  time: 19.23
+  Batch size: 1000
+  n=1       time: 0.001 ms
+  n=10      time: 0.003 ms
+  n=100     time: 0.03 ms
+  n=1000    time: 0.208 ms 
+  n=10000   time: 2.05 ms
+  n=100000  time: 19.23 ms
+  
   ANALYSIS:
-  <INSERT YOUR RESULTS ANALYSIS HERE>
+  Based on the curve of the above data when graphed, the algorithm most closely resembles a run time of nlogn, hence reaffirming our speculations.
+  Note: The small sample size, limited number of n trials, the lack of corresponding algorithms for O(n), O(n^2), and like classifications
+  may make our time justification somewhat unreliable. 
+  
   ======================================*/
 
 public class MergeSortTester 
