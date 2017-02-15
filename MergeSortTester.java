@@ -12,11 +12,12 @@
   <INSERT YOUR EXECUTION TIME CATEGORIZATION OF MERGESORT HERE>
   Mean execution times for dataset of size n:
   Batch size: <# of times each dataset size was run>
-  n=1       time: 
-  n=10      time: 
-  n=100     time: 
-  ...
-  n=<huge>  time: 
+  n=1       time: 0.001
+  n=10      time: 0.003
+  n=100     time: 0.03
+  n=1000    time: 0.208
+  n=10000   time: 2.05
+  n=100000  time: 19.23
   ANALYSIS:
   <INSERT YOUR RESULTS ANALYSIS HERE>
   ======================================*/
@@ -58,14 +59,20 @@ public class MergeSortTester
     
 
     /******************************
-     * execution time analysis 
-     * <INSERT YOUR DESCRIPTION HERE OF 
-     *  YOUR APPARATUS FOR GENERATING EXECUTION 
-     *  TIME DATA...>
+     * execution time analysis: 
+     * Runs the tester function which
+     * generates 1000 arrays of the desired
+     * length n. Averages the runtime of each array
+     * of length n at the end and returns the average.
      ******************************/
     public static void main( String[] args ) 
     {
+	System.out.println(tester(1));
+	System.out.println(tester(10));
+	System.out.println(tester(100));
+	System.out.println(tester(1000));
 	System.out.println(tester(10000));
+	System.out.println(tester(100000));
     }//end main
 
 }//end class
