@@ -1,3 +1,9 @@
+//Team MergeSort#1: Tiffany Moi, Brooke Jin, Irene Lam, Clive Johnston
+//APCS2 pd5
+//HW07 - What Does the Data Say?
+//2017-02-15
+
+
 /*======================================
   class MergeSortTester
   ALGORITHM:
@@ -18,6 +24,39 @@
 public class MergeSortTester 
 {
 
+    //tester method for testing runTime of array of length n
+    public static double tester(int n) {
+
+	//create 2D array for testing of length 1000 x n
+	int[][] tester = new int[1000][n];
+	for (int i = 0; i < tester.length; i++) {
+	    for (int j = 0; j < tester[i].length; j++) {
+		tester[i][j] = (int) (Math.random() * 1000);
+	    }
+	}
+
+	//get start time
+	long startTime = System.currentTimeMillis();
+	//System.out.println(startTime);
+
+	//sort every array
+	for (int[] arr : tester) {
+	    MergeSort.sort(arr);
+	}
+
+	//get end time
+	long endTime = System.currentTimeMillis();
+	//System.out.println(endTime);
+
+	//return average time
+	//System.out.println(endTime - startTime);
+	return (double)(endTime - startTime) / 1000.0;
+    }
+
+	
+    
+    
+
     /******************************
      * execution time analysis 
      * <INSERT YOUR DESCRIPTION HERE OF 
@@ -26,7 +65,7 @@ public class MergeSortTester
      ******************************/
     public static void main( String[] args ) 
     {
-
+	System.out.println(tester(10000));
     }//end main
 
 }//end class
